@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.demo.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+   <children>
+      <RadioButton fx:id="natural" layoutX="194.0" layoutY="161.0" mnemonicParsing="false" onAction="#onActionNatural" text="Natural" />
+      <RadioButton fx:id="juridica" layoutX="313.0" layoutY="161.0" mnemonicParsing="false" onAction="#onActionJuridica" text="Juridica" />
+      <TextField fx:id="txtEmail" layoutX="209.0" layoutY="200.0" onAction="#guardarEmail" promptText="email" visible="false" />
+      <TextField fx:id="txtNombre" layoutX="110.0" layoutY="46.0" onAction="#guardarNombre" promptText="Nombre" />
+      <TextField fx:id="txtIdentificador" layoutX="110.0" layoutY="89.0" onAction="#guardarID" promptText="Identificador" />
+      <TextField fx:id="txtDireccion" layoutX="329.0" layoutY="46.0" onAction="#guardarDireccion" promptText="Direccion" />
+      <TextField fx:id="txtTelefono" layoutX="329.0" layoutY="89.0" onAction="#guardarTelefono" promptText="Telefono" />
+      <TextField fx:id="nit" layoutX="209.0" layoutY="237.0" onAction="#guardarNit" promptText="nit" visible="false" />
+   </children>
+</AnchorPane>
